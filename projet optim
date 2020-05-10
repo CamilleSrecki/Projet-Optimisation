@@ -1,0 +1,15 @@
+On étudie le problème donné en correction dans le cas d'une seule voiture, 
+de fonction à minimiser $f : \omega \longrightarrow p^T \times \omega $ sous les contraintes : 
+\begin{equation}
+    c_1 : \omega \longrightarrow - \omega
+\end{equation}
+\begin{equation}
+    c_2 : \omega \longrightarrow \omega - \omega_{max}
+\end{equation}
+\begin{equation}
+    c_3 : \omega \longrightarrow (\Delta q - b_0 1_{[n_0,n_f]}^T \omega) \times \Delta q + b_0 1_{[n_0,n_f]}^T \omega
+\end{equation}
+Les contraintes $c_1$ et $c_2$  bornent $\omega$ : $ \omega \in [0,\omega_{max}]$. De plus $f$ est linéaire 
+et convexe et la recherche du minimum se fait sur un fermé borné, donc le problème admet un minimum global. 
+En revanche, $f$ étant linéaire donc pas $\alpha$-convexe, on ne peut pas conclure sur l'unicité du minimum. 
+Pour la recherche du min, on s'oriente donc vers un algorithme d'Uzawa. 
